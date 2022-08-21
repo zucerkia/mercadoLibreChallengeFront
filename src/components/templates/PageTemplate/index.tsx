@@ -9,7 +9,7 @@ const PageTemplate = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <main className="max-w-screen-2xl mx-auto bg-meli-light-gray min-h-[calc(100vh_-_50px)]">
+      <main className="bg-meli-light-gray min-h-[calc(100vh_-_50px)]">
         {children}
       </main>
     </>

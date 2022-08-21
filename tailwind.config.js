@@ -57,6 +57,14 @@ module.exports = {
         'monospace',
       ],
     },
+    fontSize: {
+      12: '.75rem',
+      14: '.875rem',
+      base: '1rem',
+      18: '1.125rem',
+      20: '1.25rem',
+      24: '1.5rem',
+    },
     fontWeight: {
       thin: '100',
       extralight: '200',
