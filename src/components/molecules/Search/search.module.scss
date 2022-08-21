@@ -1,0 +1,21 @@
+.searchBox {
+  @apply grid w-full col-start-3 col-end-12 rounded-sm overflow-hidden;
+  max-height: 32px;
+  grid-template-columns: auto 36px;
+
+  &__input {
+    @apply w-full pl-3 text-meli-gray;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    @apply flex bg-meli-light-gray justify-center items-center;
+
+    img {
+      @apply h-4 w-4;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.header {
+  @apply max-w-screen-2xl mx-auto bg-meli-yellow;
+  height: 50px;
+
+  &__container {
+    @apply py-2 h-full;
+  }
+
+  &__logo {
+    @apply col-start-2 place-self-start;
+
+    img {
+      height: calc(50px - 18px);
+    }
+  }
+}
