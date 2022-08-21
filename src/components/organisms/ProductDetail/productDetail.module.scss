@@ -1,0 +1,18 @@
+.productDetail {
+  @apply grid gap-x-4 bg-white mt-8 col-start-2 col-end-12 p-8 rounded;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+
+  &__image {
+    @apply col-start-1 col-end-7 w-full;
+    max-width: 680px;
+    object-fit: cover;
+  }
+
+  &__info {
+    @apply col-start-8 col-span-3;
+  }
+
+  &__description {
+    @apply col-start-1 col-end-9 mt-24;
+  }
+}

@@ -1,8 +1,7 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Breadcrums from '../../molecules/Breadcrums'
 
 // Components
+import Breadcrums from '../../molecules/Breadcrums'
 import Product from '../../molecules/Product'
 import ProductsList from '../../organisms/ProductsList'
 

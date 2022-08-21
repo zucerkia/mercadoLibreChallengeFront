@@ -17,13 +17,10 @@ root.render(
   <React.StrictMode>
     <Router>
       <PageTemplate>
-        <Link to="items">items</Link>
-        <Link to="items/23">items/id</Link>
         <Routes>
           <Route path="/" element={<HomePage />}>
-            <Route path="/items" element={<ItemsPage />}>
-              <Route path=":id" element={<DetailPage />} />
-            </Route>
+            <Route path="items" element={<ItemsPage />} />
+            <Route path="items/:id" element={<DetailPage />} />
             <Route
               path="*"
               element={
