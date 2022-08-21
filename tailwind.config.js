@@ -8,8 +8,19 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1536px',
+      '2xl': '1440px',
     },
+    colors: ({ colors }) => ({
+      inherit: colors.inherit,
+      current: colors.current,
+      transparent: colors.transparent,
+      black: colors.black,
+      white: colors.white,
+      'meli-yellow': 'var(--yellow)',
+      'meli-gray': 'var(--gray)',
+      'meli-light-gray': 'var(--light-gray)',
+      'meli-dark-gray': 'var(--dark-gray)',
+    }),
     fontFamily: {
       sans: [
         'ui-sans-serif',

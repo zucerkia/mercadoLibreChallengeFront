@@ -1,3 +1,14 @@
+:root {
+    --yellow: #ffe600;
+    --gray: #999;
+    --dark-gray: #333;
+    --light-gray: #eee;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.grid-layout {
+    @apply max-w-[1040px] mx-auto grid grid-cols-12 gap-x-4;
+}
