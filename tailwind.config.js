@@ -20,6 +20,7 @@ module.exports = {
       'meli-gray': 'var(--gray)',
       'meli-light-gray': 'var(--light-gray)',
       'meli-dark-gray': 'var(--dark-gray)',
+      'meli-blue': 'var(--blue)',
     }),
     fontFamily: {
       sans: [
@@ -59,11 +60,13 @@ module.exports = {
     },
     fontSize: {
       12: '.75rem',
-      14: '.875rem',
+      14: ['.875rem', '1rem'],
       base: '1rem',
       18: '1.125rem',
       20: '1.25rem',
-      24: '1.5rem',
+      24: ['1.5rem', '1.75rem'],
+      28: ['1.75rem', '1.875rem'],
+      46: ['2.875rem', '3rem'],
     },
     fontWeight: {
       thin: '100',

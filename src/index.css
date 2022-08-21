@@ -3,6 +3,7 @@
     --gray: #999;
     --dark-gray: #333;
     --light-gray: #eee;
+    --blue: #3483fa;
 }
 
 @tailwind base;
