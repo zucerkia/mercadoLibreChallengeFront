@@ -1,5 +1,6 @@
 .product {
-  @apply px-4 col-start-2 col-end-12 bg-white divide-y divide-meli-light-gray;
+  @apply px-4 col-start-2 col-end-12;
+  @apply bg-white divide-y divide-meli-light-gray text-meli-dark-gray;
 
   &__info {
     @apply col-start-2 col-end-12 grid gap-x-4 my-4;
