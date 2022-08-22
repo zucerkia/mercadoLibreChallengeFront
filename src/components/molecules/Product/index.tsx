@@ -46,7 +46,7 @@ const Product = ({ product }: Props) => {
           <p className="text-18">{product.title}</p>
         </div>
         <p className="text-12 mt-4 text-meli-gray col-start-9 col-span-2">
-          capital federal
+          {product.city}
         </p>
       </div>
       <hr />

@@ -17,6 +17,7 @@ interface Item {
   condition: string
   sold_quantity: number
   free_shipping: boolean
+  city_name: string
 }
 
 interface Price {

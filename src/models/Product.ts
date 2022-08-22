@@ -6,4 +6,5 @@ export interface Product {
   title: string
   freeShipping: boolean
   soldQuantity: number
+  city?: string
 }

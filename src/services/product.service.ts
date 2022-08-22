@@ -32,6 +32,7 @@ const searchProducts = async (query: string): Promise<SearchProducts> => {
       freeShipping: item.free_shipping,
       currency: item.price.currency,
       soldQuantity: item.sold_quantity,
+      city: item.city_name,
     })),
   }
 }
