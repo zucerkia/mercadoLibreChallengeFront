@@ -1,5 +1,5 @@
 .productDetail {
-  @apply grid gap-x-4 bg-white mt-8 col-start-2 col-end-12 p-8 rounded;
+  @apply grid gap-x-4 bg-white col-start-2 col-end-12 p-8 rounded;
   grid-template-columns: repeat(10, minmax(0, 1fr));
 
   &__image {

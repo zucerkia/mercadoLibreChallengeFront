@@ -1,5 +1,5 @@
 .product {
-  @apply px-4 col-start-2 col-end-12;
+  @apply px-4 col-start-2 col-end-12 cursor-pointer;
   @apply bg-white divide-y divide-meli-light-gray text-meli-dark-gray;
 
   &__info {

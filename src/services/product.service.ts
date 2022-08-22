@@ -31,6 +31,7 @@ const searchProducts = async (query: string): Promise<SearchProducts> => {
       image: item.picture,
       freeShipping: item.free_shipping,
       currency: item.price.currency,
+      soldQuantity: item.sold_quantity,
     })),
   }
 }
@@ -47,6 +48,7 @@ const getProductById = async (id: string): Promise<ProductDetail> => {
     description: item.description,
     condition: item.condition,
     currency: item.price.currency,
+    soldQuantity: item.sold_quantity,
   }
   return productDetail
 }

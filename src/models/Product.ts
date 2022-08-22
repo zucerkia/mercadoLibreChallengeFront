@@ -5,4 +5,5 @@ export interface Product {
   currency: string
   title: string
   freeShipping: boolean
+  soldQuantity: number
 }

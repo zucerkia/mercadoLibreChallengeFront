@@ -1,14 +1,18 @@
 import React from 'react'
+import { useProduct } from '../../../hooks/useProduct'
 
 // Components
-import Breadcrums from '../../molecules/Breadcrums'
 import ProductDetail from '../../organisms/ProductDetail'
 
 const DetailPage = () => {
+  const { isLoading, product } = useProduct()
+
+  if (isLoading) {
+    return <p>Loading ...</p>
+  }
   return (
     <section className="grid-layout text-meli-dark-gray">
-      <Breadcrums />
-      <ProductDetail />
+      <ProductDetail data={product} />
     </section>
   )
 }

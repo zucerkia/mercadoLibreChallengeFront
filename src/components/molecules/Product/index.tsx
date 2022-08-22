@@ -1,10 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // Models
 import { Product as ProductModel } from '../../../models/Product'
 
 // Assets
 import shippingIcon from '../../../assets/shipping-icon.png'
+
+// Utils
+import { formatCurrency } from '../../../utils'
 
 // Styles
 import styles from './product.module.scss'
@@ -13,8 +17,13 @@ type Props = {
   product: ProductModel
 }
 const Product = ({ product }: Props) => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`${product.id}`)
+  }
   return (
-    <div className={styles.product}>
+    <div className={styles.product} onClick={handleClick}>
       <div className={styles.product__info}>
         <img
           className={styles.product__image}
@@ -23,7 +32,9 @@ const Product = ({ product }: Props) => {
         />
         <div className="mt-3 col-span-6">
           <div className="mb-4 flex items-center">
-            <span className="text-24 mr-2">$ {product.price}</span>
+            <span className="text-24 mr-2">
+              {formatCurrency(product.price, product.currency)}
+            </span>
             {product.freeShipping && (
               <img
                 className="w-4 h-4"

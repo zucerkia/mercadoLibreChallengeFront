@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Breadcrums from '../../molecules/Breadcrums'
+import Breadcrumbs from '../../molecules/Breadcrumbs'
 import Product from '../../molecules/Product'
 import ProductsList from '../../organisms/ProductsList'
 
@@ -9,14 +9,16 @@ import ProductsList from '../../organisms/ProductsList'
 import { useSearch } from '../../../hooks/useSearch'
 
 const ItemsPage = () => {
-  const { isLoading, products } = useSearch()
+  const { isLoading, products, categories } = useSearch()
 
   if (isLoading) {
     return <p>Loading...</p>
   }
   return (
     <section>
-      <Breadcrums />
+      <div className="grid-layout">
+        <Breadcrumbs categories={categories} />
+      </div>
       <ProductsList>
         {products.slice(0, 4).map((product) => (
           <Product key={product.id} product={product} />

@@ -10,10 +10,12 @@ import { searchProducts } from '../services/product.service'
 type UseSearch = {
   isLoading: boolean
   products: Product[]
+  categories: string[]
 }
 
 const useSearch = (): UseSearch => {
   const [products, setProducts] = useState<Product[]>([])
+  const [categories, setCategories] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [searchParams] = useSearchParams()
 
@@ -22,6 +24,7 @@ const useSearch = (): UseSearch => {
       setIsLoading(true)
       const response = await searchProducts(params)
       setProducts(response.products)
+      setCategories(response.categories)
     } catch (error) {
       console.error(error)
     } finally {
@@ -31,11 +34,12 @@ const useSearch = (): UseSearch => {
 
   useEffect(() => {
     handleSearch(searchParams.get('q') ?? '')
-  }, [])
+  }, [searchParams])
 
   return {
     isLoading,
     products,
+    categories,
   }
 }
 
